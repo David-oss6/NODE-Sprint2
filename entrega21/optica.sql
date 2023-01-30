@@ -1,5 +1,2 @@
-USE optica;
-
-SELECT *
-FROM ulleres
+CREATE SCHEMA optica;
 
