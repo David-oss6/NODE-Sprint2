@@ -1,5 +1,1 @@
-UPDATE empleats
-
-
-SET nom = 'Mariano'
-WHERE empleat_id = 2
+SELECT * FROM optica.clients;
