@@ -1,0 +1,84 @@
+USE databse (ej: sql_store) o doble click en la base de datos que queremos trabajar
+SELECT * (propiedades que vamos a seleccionar, ej: last_name, phone_number, etz)(columnas)
+FROM customers (tablas)	
+    customers c (igualamos customers a c, ej: c.order_id)
+WHERE last_name REGEXP '[a-h]e'   (filtrados)
+    LIKE OR AND BETWEEN
+    AS
+en LIKE:
+        % (% simboliza cualquier caracter, ej: '%bush' en este caso busca cualquier customer last_name acabado en bush) '%asd%' (el string contiene asd en alguna parte, ej: 'Paco asd chocolatero') 'Dav%' el string empieza por Dav, ej: 'David'
+en REGEXP
+    'asd' es igual a '%asd%'
+    ^ (comienzo del string (seria lo mismo que 'string%'))
+    | logical or (buscar varios patrones, ej: 'Marc | Pablo | Alex')    
+    $ (el string acaba con, ej: 'marc$' seria lo mismo que '%string' )
+    [asd] la palabra buscada contiene los caracteres, individualmente, dentro de []. ej: '[d]a'
+    [a-h] todos los caracteres entre la a y la h
+ORDER BY
+    DESC
+LIMIT x (imprime hasta x de la lista)
+    x , y (empieza a imprimir desde la posicion x, y número de impersiones)
+
+*****************************************************************************************************
+SELECT o.order_id, p.product_id, quantity, o.unit_price
+FROM order_items o
+JOIN products p ON o.order_id = p.product_id (buscar coincidencias en tablas /  CONDICIONES)
+
+*****************************************************************************************************
+USE sql_hr;
+SELECT e.employee_id,
+		e.first_name,
+		m.first_name AS manager
+FROM employees e
+JOIN employees m ON e.reports_to = m.employee_id
+*****************************************************************************************************
+USE sql_store;
+SELECT 
+o.order_id, 
+o.order_date, 
+c.first_name, 
+c.last_name,
+os.name AS status
+FROM orders o 
+JOIN customers c 
+	ON o.customer_id = c.customer_id
+JOIN order_statuses os 
+	ON o.status = os.order_status_id
+*****************************************************************************************************
+INSERT INTO products (product_id, name, quantity_in_stock, unit_price)
+VALUE (DEFAULT, 
+        'Name2',
+        60,
+        2),
+(DEFAULT, 
+        'Name3',
+        15,
+        99)
+*****************************************************************************************************
+CREATE TABLE invoices_archive AS
+SELECT 
+	i.invoice_id,
+    i.number,
+    c.name AS client,
+    ...    
+FROM invoices i
+JOIN clients c
+	USING (client_id)
+WHERE payment_date IS NOT NULL
+*****************************************************************************************************
+UPDATE invoices
+SET payment_total = invoice_total * 0.5, payment_date = due_date
+WHERE invoice_id = 3;
+*****************************************************************************************************
+UPDATE orders
+SET comments = 'GOLD'
+
+-- SELECT *          <--- buena práctica usar select para comprobar el resultado antes de usar   
+-- FROM orders            UPDATE 
+WHERE customer_id IN 
+	(
+    SELECT customer_id
+    FROM customers c
+    WHERE points > 3000
+    )
+*****************************************************************************************************
