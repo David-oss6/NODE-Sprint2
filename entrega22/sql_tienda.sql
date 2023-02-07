@@ -66,14 +66,23 @@ SELECT p.nombre, p.precio, f.nombre FROM producto p JOIN fabricante f WHERE (f.c
 Retorna un llistat amb el codi i el nom de fabricant, solament d aquells fabricants que tenen productes associats en la base de dades.
 SELECT f.nombre, f.codigo FROM fabricante f JOIN producto p WHERE (f.codigo = p.codigo_fabricante) 
 Retorna un llistat de tots els fabricants que existeixen en la base de dades, juntament amb els productes que té cadascun d ells. El llistat haurà de mostrar també aquells fabricants que no tenen productes associats.
-SELECT * FROM fabricante f JOIN producto p WHERE (f.codigo = p.codigo_fabricante) AND NOT (f.codigo = p.codigo_fabricante ) <--------------NO FUNCIONA**********************
-Retorna un llistat on només apareguin aquells fabricants que no tenen cap producte associat.<--------------NO LO SE *********************
+SELECT * FROM fabricante f 
+JOIN producto p ON f.codigo = p.codigo_fabricante 
+OR  p.codigo_fabricante IS NULL
+Retorna un llistat on només apareguin aquells fabricants que no tenen cap producte associat.
+SELECT fabricante.nombre  FROM fabricante
+WHERE NOT EXISTS (SELECT fabricante.codigo FROM producto WHERE fabricante.codigo = producto.codigo_fabricante) 
 Retorna tots els productes del fabricador Lenovo. (Sense utilitzar INNER JOIN).
 SELECT * FROM producto p, fabricante f WHERE p.codigo_fabricante = f.codigo AND f.nombre = 'Lenovo'
-Retorna totes les dades dels productes que tenen el mateix preu que el producte més car del fabricant Lenovo. (Sense usar INNER JOIN).<--------------NO LO SE *********************
+Retorna totes les dades dels productes que tenen el mateix preu que el producte més car del fabricant Lenovo. (Sense usar INNER JOIN).SELECT * FROM producto 
+WHERE producto.precio > (SELECT MAX(producto.precio) FROM producto WHERE producto.codigo_fabricante = 2)
 Llista el nom del producte més car del fabricant Lenovo.
 SELECT * FROM producto p JOIN fabricante f WHERE p.codigo_fabricante = f.codigo AND f.nombre = 'Lenovo' ORDER BY p.precio DESC LIMIT 1
 Llista el nom del producte més barat del fabricant Hewlett-Packard.
 SELECT * FROM producto p JOIN fabricante f WHERE p.codigo_fabricante = f.codigo AND f.nombre = 'Hewlett-Packard' ORDER BY p.precio ASC LIMIT 1
-Retorna tots els productes de la base de dades que tenen un preu major o igual al producte més car del fabricant Lenovo.<--------------NO LO SE *********************
-Llesta tots els productes del fabricant Asus que tenen un preu superior al preu mitjà de tots els seus productes.<--------------NO LO SE *********************
+Retorna tots els productes de la base de dades que tenen un preu major o igual al producte més car del fabricant Lenovo.
+SELECT * FROM producto
+WHERE producto.precio >= (SELECT MAX(producto.precio) FROM producto WHERE producto.codigo_fabricante = 1)
+Llesta tots els productes del fabricant Asus que tenen un preu superior al preu mitjà de tots els seus productes.
+SELECT * FROM producto
+WHERE producto.precio > (SELECT AVG(producto.precio) FROM producto WHERE producto.codigo_fabricante = 1) 
