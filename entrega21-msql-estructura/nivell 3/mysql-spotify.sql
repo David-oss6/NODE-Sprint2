@@ -131,18 +131,15 @@ DROP TABLE IF EXISTS `favoritos`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `favoritos` (
   `favorito_id` int NOT NULL AUTO_INCREMENT,
-  `usuario_premium` int DEFAULT NULL,
-  `usuario_free` int DEFAULT NULL,
+  `usuario` int DEFAULT NULL,
   `cancion` int DEFAULT NULL,
   `album` int DEFAULT NULL,
   `artista` int DEFAULT NULL,
   PRIMARY KEY (`favorito_id`),
-  KEY `usuario_premium_idx` (`usuario_premium`),
-  KEY `usuario_free_idx` (`usuario_free`),
   KEY `cancion_idx` (`cancion`),
   KEY `album_idx` (`album`),
   KEY `artista_idx` (`artista`),
-  CONSTRAINT `usuario_premium` FOREIGN KEY (`usuario_premium`) REFERENCES `usuari_premium` (`us_pr_id`)
+  KEY `usuario_premium_idx` (`usuario`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -152,7 +149,7 @@ CREATE TABLE `favoritos` (
 
 LOCK TABLES `favoritos` WRITE;
 /*!40000 ALTER TABLE `favoritos` DISABLE KEYS */;
-INSERT INTO `favoritos` VALUES (1,1,NULL,1,NULL,1);
+INSERT INTO `favoritos` VALUES (1,NULL,1,NULL,1);
 /*!40000 ALTER TABLE `favoritos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -220,13 +217,10 @@ CREATE TABLE `playlists` (
   `numero_canciones` int NOT NULL,
   `data_creacio` date NOT NULL,
   `estado` set('activa','eliminada') NOT NULL,
-  `usuari_premium` int DEFAULT NULL,
-  `usuari_free` int DEFAULT NULL,
+  `usuari` int DEFAULT NULL,
   PRIMARY KEY (`playlist_id`),
-  KEY `usuari_premium_idx` (`usuari_premium`),
-  KEY `usuari_free_idx` (`usuari_free`),
-  CONSTRAINT `usuari_free` FOREIGN KEY (`usuari_free`) REFERENCES `usuari_free` (`us_fr_id`),
-  CONSTRAINT `usuari_premium` FOREIGN KEY (`usuari_premium`) REFERENCES `usuari_premium` (`us_pr_id`)
+  KEY `usuari_premium_idx` (`usuari`),
+  CONSTRAINT `usuari_premium` FOREIGN KEY (`usuari`) REFERENCES `usuari` (`us_pr_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -236,7 +230,7 @@ CREATE TABLE `playlists` (
 
 LOCK TABLES `playlists` WRITE;
 /*!40000 ALTER TABLE `playlists` DISABLE KEYS */;
-INSERT INTO `playlists` VALUES (1,'myPlaylist',1,'2023-02-02','activa',NULL,1);
+INSERT INTO `playlists` VALUES (1,'myPlaylist',1,'2023-02-02','activa',NULL);
 /*!40000 ALTER TABLE `playlists` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -249,19 +243,16 @@ DROP TABLE IF EXISTS `subscripcions`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `subscripcions` (
   `subscripcio_id` int NOT NULL AUTO_INCREMENT,
-  `usuari` int NOT NULL,
   `data_inici` date NOT NULL,
   `data_renovacio` date NOT NULL,
   `metode_pagament` set('Targeta','Pay Pal') NOT NULL,
   `targeta_credit_id` int DEFAULT NULL,
   `pay_pal_id` int DEFAULT NULL,
   PRIMARY KEY (`subscripcio_id`),
-  KEY `usuari_idx` (`usuari`),
   KEY `targeta_credit_id_idx` (`targeta_credit_id`),
   KEY `pay_pal_id_idx` (`pay_pal_id`),
   CONSTRAINT `pay_pal_id` FOREIGN KEY (`pay_pal_id`) REFERENCES `pay_pal` (`pay_pal_id`),
-  CONSTRAINT `targeta_credit_id` FOREIGN KEY (`targeta_credit_id`) REFERENCES `targetes_credit` (`targeta_id`),
-  CONSTRAINT `usuari` FOREIGN KEY (`usuari`) REFERENCES `usuari_premium` (`us_pr_id`)
+  CONSTRAINT `targeta_credit_id` FOREIGN KEY (`targeta_credit_id`) REFERENCES `targetes_credit` (`targeta_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -271,7 +262,7 @@ CREATE TABLE `subscripcions` (
 
 LOCK TABLES `subscripcions` WRITE;
 /*!40000 ALTER TABLE `subscripcions` DISABLE KEYS */;
-INSERT INTO `subscripcions` VALUES (1,1,'2023-02-02','2023-03-02','Targeta',1,NULL);
+INSERT INTO `subscripcions` VALUES (1,'2023-02-02','2023-03-02','Targeta',1,NULL);
 /*!40000 ALTER TABLE `subscripcions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -303,43 +294,13 @@ INSERT INTO `targetes_credit` VALUES (1,123456789,12,1990,33);
 UNLOCK TABLES;
 
 --
--- Table structure for table `usuari_free`
+-- Table structure for table `usuari`
 --
 
-DROP TABLE IF EXISTS `usuari_free`;
+DROP TABLE IF EXISTS `usuari`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `usuari_free` (
-  `us_fr_id` int NOT NULL AUTO_INCREMENT,
-  `nom` varchar(45) NOT NULL,
-  `email` varchar(45) NOT NULL,
-  `password` varchar(45) NOT NULL,
-  `data_neixement` date NOT NULL,
-  `sexe` varchar(6) NOT NULL,
-  `codi_postal` int NOT NULL,
-  `pais` varchar(15) NOT NULL,
-  PRIMARY KEY (`us_fr_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `usuari_free`
---
-
-LOCK TABLES `usuari_free` WRITE;
-/*!40000 ALTER TABLE `usuari_free` DISABLE KEYS */;
-INSERT INTO `usuari_free` VALUES (1,'Paco','asd@hotmail.com','asd','1985-04-07','M',8022,'ESP');
-/*!40000 ALTER TABLE `usuari_free` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `usuari_premium`
---
-
-DROP TABLE IF EXISTS `usuari_premium`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `usuari_premium` (
+CREATE TABLE `usuari` (
   `us_pr_id` int NOT NULL AUTO_INCREMENT,
   `nom` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
@@ -348,18 +309,23 @@ CREATE TABLE `usuari_premium` (
   `sexe` varchar(6) NOT NULL,
   `codi_postal` int NOT NULL,
   `pais` varchar(15) NOT NULL,
-  PRIMARY KEY (`us_pr_id`)
+  `tipus_usuari` set('premium','free') NOT NULL,
+  `subscripcio` int DEFAULT NULL,
+  `USUARI_PREMIUM_us_pr_id` int NOT NULL,
+  PRIMARY KEY (`us_pr_id`,`USUARI_PREMIUM_us_pr_id`),
+  KEY `subscripcion_idx_idx` (`subscripcio`),
+  KEY `fk_USUARI_PREMIUM_USUARI_PREMIUM1_idx` (`USUARI_PREMIUM_us_pr_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `usuari_premium`
+-- Dumping data for table `usuari`
 --
 
-LOCK TABLES `usuari_premium` WRITE;
-/*!40000 ALTER TABLE `usuari_premium` DISABLE KEYS */;
-INSERT INTO `usuari_premium` VALUES (1,'David','asd@hotmail.com','asd','1985-04-07','M',8022,'ESP'),(2,'David','asd@hotmail.com','asd','1985-04-07','M',8022,'ESP');
-/*!40000 ALTER TABLE `usuari_premium` ENABLE KEYS */;
+LOCK TABLES `usuari` WRITE;
+/*!40000 ALTER TABLE `usuari` DISABLE KEYS */;
+INSERT INTO `usuari` VALUES (1,'David','asd@hotmail.com','asd','1985-04-07','M',8022,'ESP','premium',1,0),(2,'David','asd@hotmail.com','asd','1985-04-07','M',8022,'ESP','free',NULL,0);
+/*!40000 ALTER TABLE `usuari` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -371,4 +337,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-02-03 18:17:51
+-- Dump completed on 2023-02-09 19:51:06

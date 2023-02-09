@@ -11,14 +11,18 @@ SELECT * FROM asignatura  JOIN grado ON grado.id = asignatura.id_grado AND cuatr
 Retorna un llistat dels professors/es juntament amb el nom del departament al qual estan vinculats. El llistat ha de retornar quatre columnes, primer cognom, segon cognom, nom i nom del departament. El resultat estarà ordenat alfabèticament de menor a major pels cognoms i el nom.
 SELECT p.apellido1, p.apellido2, p.nombre, departamento.nombre FROM persona p JOIN profesor ON profesor.id_profesor = p.id RIGHT JOIN departamento ON profesor.id_departamento = departamento.id ORDER BY p.apellido1 DESC, p.apellido2 DESC, p.nombre DESC
 Retorna un llistat amb el nom de les assignatures, any d inici i any de fi del curs escolar de l alumne/a amb NIF 26902806M.
-SELECT nombre FROM asignatura WHERE asignatura.id = (
-SELECT id_asignatura from alumno_se_matricula_asignatura asm WHERE asm.id_alumno = (SELECT id FROM persona WHERE nif =  '26902806M') LIMIT 1
- )
-SELECT anyo_inicio, anyo_fin FROM curso_escolar WHERE curso_escolar.id = (
-SELECT id_curso_escolar from alumno_se_matricula_asignatura asm WHERE asm.id_alumno = (SELECT id FROM persona WHERE nif =  '26902806M') LIMIT 1
-)
+SELECT asi.nombre, ce.anyo_inicio, ce.anyo_fin FROM asignatura asi
+JOIN alumno_se_matricula_asignatura asm ON asm.id_asignatura = asi.id
+JOIN curso_escolar ce ON ce.id = asi.curso 
+JOIN persona per ON per.nif REGEXP '26902806M'
 Retorna un llistat amb el nom de tots els departaments que tenen professors/es que imparteixen alguna assignatura en el Grau en Enginyeria Informàtica (Pla 2015).
+SELECT dep.nombre FROM departamento dep
+JOIN profesor ON profesor.id_departamento = dep.id
+JOIN asignatura ON asignatura.id_grado = 4
+GROUP BY dep.nombre
 Retorna un llistat amb tots els alumnes que s han matriculat en alguna assignatura durant el curs escolar 2018/2019.
 SELECT nombre FROM persona
-WHERE persona.id = (SELECT asm.id_alumno from alumno_se_matricula_asignatura asm
-WHERE asm.id_alumno =  (SELECT ce.id FROM curso_escolar ce JOIN alumno_se_matricula_asignatura ON (ce.id = asm.id_curso_escolar) AND ce.anyo_inicio > '2018-01-01' LIMIT 1)LIMIT 1) LIMIT 1
+JOIN alumno_se_matricula_asignatura asm On asm.id_alumno = persona.id
+JOIN curso_escolar ce ON ce.id = asm.id_curso_escolar
+WHERE ce.anyo_inicio BETWEEN '2018-01-01' AND '2019-12-31'
+GROUP BY persona.id
