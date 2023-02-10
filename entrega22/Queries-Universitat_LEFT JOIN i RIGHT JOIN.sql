@@ -1,0 +1,5 @@
+SELECT  dep.nombre, per.nombre, per.apellido1, per.apellido2 FROM persona per RIGHT JOIN profesor prof ON per.id = prof.id_profesor  RIGHT JOIN departamento dep ON prof.id_departamento = dep.idORDER BY dep.nombre ASC, per.apellido1 ASC, per.apellido2 ASC, per.nombre ASC
+SELECT id_profesor, departamento.nombre FROM profesor p LEFT JOIN departamento ON p.id_profesor = departamento.id WHERE departamento.id IS NULL
+SELECT dep.id AS departamento_id FROM departamento dep LEFT JOIN profesor ON profesor.id_departamento = dep.id WHERE profesor.id_departamento IS NULL
+SELECT profesor.id_profesor FROM profesor LEFT JOIN asignatura ON profesor.id_profesor = asignatura.id_profesor WHERE asignatura.id_profesor IS NULL
+SELECT asignatura.nombre FROM asignatura LEFT JOIN profesor ON asignatura.id_profesor = profesor.id_profesor WHERE asignatura.id_profesor IS NULL

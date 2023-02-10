@@ -1,0 +1,9 @@
+SELECT  CONCAT_WS(' ',  apellido1, apellido2, nombre) as alumnos FROM persona p JOIN alumno_se_matricula_asignatura asm ON p.id = asm.id_alumno GROUP BY p.id ORDER BY apellido1 DESC, apellido2 DESC, nombre DESC
+SELECT  CONCAT_WS(' ',  apellido1, apellido2, nombre) as alumnos FROM persona p JOIN alumno_se_matricula_asignatura asm ON (p.id = asm.id_alumno) AND p.telefono IS NULL GROUP BY p.id 
+SELECT  CONCAT_WS(' ',  apellido1, apellido2, nombre) as alumnos FROM persona p JOIN alumno_se_matricula_asignatura asm ON (p.id = asm.id_alumno) AND (p.fecha_nacimiento BETWEEN '1998-12-30' AND '1999-12-30') GROUP BY p.id 
+SELECT * FROM profesor prof JOIN persona per ON (prof.id_profesor = per.id) AND (per.nif LIKE '%k')
+SELECT * FROM asignatura JOIN grado ON grado.id = asignatura.id_grado AND cuatrimestre = 1 AND curso =3 WHERE id_grado = 7
+SELECT p.apellido1, p.apellido2, p.nombre, departamento.nombre FROM persona p JOIN profesor ON profesor.id_profesor = p.id RIGHT JOIN departamento ON profesor.id_departamento = departamento.id ORDER BY p.apellido1 DESC, p.apellido2 DESC, p.nombre DESC
+SELECT asi.nombre, ce.anyo_inicio, ce.anyo_fin FROM asignatura asi JOIN alumno_se_matricula_asignatura asm ON asm.id_asignatura = asi.id JOIN curso_escolar ce ON ce.id = asi.curso JOIN persona per ON per.nif REGEXP '26902806M'
+SELECT dep.nombre FROM departamento dep JOIN profesor ON profesor.id_departamento = dep.id JOIN asignatura ON asignatura.id_grado = 4 GROUP BY dep.nombre
+SELECT nombre FROM persona JOIN alumno_se_matricula_asignatura asm On asm.id_alumno = persona.id JOIN curso_escolar ce ON ce.id = asm.id_curso_escolar WHERE ce.anyo_inicio BETWEEN '2018-01-01' AND '2019-12-31' GROUP BY persona.id

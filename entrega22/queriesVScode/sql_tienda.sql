@@ -1,3 +1,4 @@
+-- *************************************************   FET  HECHO    DONE *****************************************
 Llista el nom de tots els productes que hi ha en la taula producto.
 SELECT nombre FROM producto
 Llista els noms i els preus de tots els productes de la taula producto.
@@ -56,7 +57,7 @@ SELECT * FROM producto p JOIN fabricante f ON f.codigo = p.codigo_fabricante AND
 Retorna un llistat amb tots els productes dels fabricants Asus, Hewlett-Packard y Seagate. Sense utilitzar l operador IN.
 SELECT * FROM producto p JOIN fabricante f ON f.codigo = p.codigo_fabricante AND f.nombre = 'Asus' OR f.nombre = 'Seagate' OR f.nombre = 'Hewlett-Packard'
 Retorna un llistat amb tots els productes dels fabricants Asus, Hewlett-Packard y Seagate. Fent servir l operador IN.
-JOIN fabricante f WHERE (f.codigo = p.codigo_fabricante AND f.nombre = 'Asus'  ) OR  (f.codigo = p.codigo_fabricante AND f.nombre = 'Seagate'  ) OR  (f.codigo = p.codigo_fabricante AND f.nombre = 'Hewlett-Packard')
+SELECT * FROM producto WHERE codigo_fabricante IN (1,3,5) 
 Retorna un llistat amb el nom i el preu de tots els productes dels fabricants el nom dels quals acabi per la vocal e.
 SELECT p.nombre, p.precio, f.nombre FROM producto p JOIN fabricante f WHERE (f.codigo = p.codigo_fabricante) AND f.nombre LIKE '%e' 
 Retorna un llistat amb el nom i el preu de tots els productes el nom de fabricant dels quals contingui el caràcter w en el seu nom.
@@ -81,8 +82,6 @@ SELECT * FROM producto p JOIN fabricante f WHERE p.codigo_fabricante = f.codigo 
 Llista el nom del producte més barat del fabricant Hewlett-Packard.
 SELECT * FROM producto p JOIN fabricante f WHERE p.codigo_fabricante = f.codigo AND f.nombre = 'Hewlett-Packard' ORDER BY p.precio ASC LIMIT 1
 Retorna tots els productes de la base de dades que tenen un preu major o igual al producte més car del fabricant Lenovo.
-SELECT * FROM producto
-WHERE producto.precio >= (SELECT MAX(producto.precio) FROM producto WHERE producto.codigo_fabricante = 1)
+SELECT * FROM producto WHERE producto.precio >= (SELECT MAX(producto.precio) FROM producto WHERE producto.codigo_fabricante = 1)
 Llesta tots els productes del fabricant Asus que tenen un preu superior al preu mitjà de tots els seus productes.
-SELECT * FROM producto
-WHERE producto.precio > (SELECT AVG(producto.precio) FROM producto WHERE producto.codigo_fabricante = 1) 
+SELECT * FROM producto WHERE producto.precio > (SELECT AVG(producto.precio) FROM producto WHERE producto.codigo_fabricante = 1) 
