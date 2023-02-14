@@ -1,0 +1,44 @@
+[{
+  "_id": {
+    "$oid": "63ea1ec712c5c09807609fa6"
+  },
+  "client": {
+    "$oid": "63e9fac8e97a1264c238387a"
+  },
+  "comanda id": 1,
+  "data/hora": "******",
+  "tipus comanda": "per emportar",
+  "productes": [
+    {
+      "$oid": "63e9f534e97a1264c2383874"
+    },
+    {
+      "$oid": "63e9f50ae97a1264c238386d"
+    }
+  ],
+  "botiga": "botiga1",
+  "empleat": " ObjectId(\"63ea2407e97a1264c23838a6\")",
+  "preu total": 12
+},{
+  "_id": {
+    "$oid": "63ea291312c5c09807609fa9"
+  },
+  "client": {
+    "$oid": "63ea2809e97a1264c23838b2"
+  },
+  "data/hora": "******",
+  "tipus comanda": "a botiga",
+  "productes": [
+    {
+      "$oid": "63e9f534e97a1264c2383874"
+    },
+    {
+      "$oid": "63e9f50ae97a1264c238386d"
+    }
+  ],
+  "botiga": "botiga1",
+  "empleat": {
+    "$oid": "63ea2436e97a1264c23838a9"
+  },
+  "preu total": 12
+}]

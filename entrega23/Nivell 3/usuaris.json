@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "63ea8fd8e97a1264c2383914"
+  },
+  "nom": "Paco",
+  "email": "asd@asd.com",
+  "pass": "asd456",
+  "neixement": "1990-12-12",
+  "sexe": "M",
+  "pais": "ESP",
+  "codi postal": 8022,
+  "tipus usuari": "premium",
+  "subscripcions": [
+    {
+      "data inici": "2023-01-01",
+      "data renovacio": "2023-05-05"
+    }
+  ],
+  "pagaments": [
+    {
+      "id": 1,
+      "metode": "credit card",
+      "preu": 25
+    }
+  ],
+  "playlists": null,
+  "siguiendo": [
+    {
+      "$oid": "63ea8b7ce97a1264c23838f1"
+    }
+  ],
+  "favoritos": null
+}]

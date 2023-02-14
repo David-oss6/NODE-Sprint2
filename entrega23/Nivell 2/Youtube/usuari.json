@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "63ea6dc2e97a1264c23838c0"
+  },
+  "nom": "David",
+  "password": "asd123",
+  "email": "asd@asd.com",
+  "naixement": "07/04/1985",
+  "sexe": "M",
+  "codi postal": "08022",
+  "pais": "ESP",
+  "subscripcions": [],
+  "playlists": []
+},{
+  "_id": {
+    "$oid": "63ea6deae97a1264c23838c2"
+  },
+  "nom": "Marta",
+  "password": "asd123",
+  "email": "asd@asd.com",
+  "naixement": "12/05/1990",
+  "sexe": "M",
+  "codi postal": "08033",
+  "pais": "ESP",
+  "subscripcions": [],
+  "playlists": []
+},{
+  "_id": {
+    "$oid": "63ea6e12e97a1264c23838c4"
+  },
+  "nom": "Sonia",
+  "password": "asd123",
+  "email": "sonia@asd.com",
+  "naixement": "10/10/1995",
+  "sexe": "F",
+  "codi postal": "08055",
+  "pais": "ESP",
+  "subscripcions": [],
+  "playlists": []
+}]

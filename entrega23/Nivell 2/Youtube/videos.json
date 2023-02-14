@@ -1,0 +1,113 @@
+[{
+  "_id": {
+    "$oid": "63ea72bbe97a1264c23838d4"
+  },
+  "usuari": {
+    "$oid": "63ea6e12e97a1264c23838c4"
+  },
+  "titol": "Concierto en Zaragoza",
+  "descripcio": "...",
+  "size": 4,
+  "durada": 5.3,
+  "sexe": "F",
+  "thumbnail": null,
+  "num reproduccions": 123,
+  "num likes": 3,
+  "num dislikes": 0,
+  "estat": "public",
+  "etiquetes": [
+    {
+      "$oid": "63ea6ec7e97a1264c23838cb"
+    },
+    {
+      "$oid": "63ea6ea2e97a1264c23838c9"
+    }
+  ],
+  "comentaris": [
+    {
+      "id": 963,
+      "comentat per": {
+        "$oid": "63ea6dc2e97a1264c23838c0"
+      },
+      "comentari": "......",
+      "likes": null,
+      "dislikes": [
+        {
+          "$oid": "63ea6deae97a1264c23838c2"
+        }
+      ]
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63ea735ae97a1264c23838d6"
+  },
+  "usuari": {
+    "$oid": "63ea6deae97a1264c23838c2"
+  },
+  "titol": "Paseo por Viena",
+  "descripcio": "...",
+  "size": 4,
+  "durada": 5.3,
+  "thumbnail": null,
+  "num reproduccions": 23,
+  "num likes": 23,
+  "num dislikes": 4,
+  "estat": "public",
+  "etiquetes": [
+    {
+      "$oid": "63ea6edce97a1264c23838cd"
+    }
+  ],
+  "comentaris": [
+    {
+      "id": 783,
+      "comentat per": {
+        "$oid": "63ea6dc2e97a1264c23838c0"
+      },
+      "comentari": "......",
+      "likes": [
+        {
+          "$oid": "63ea6deae97a1264c23838c2"
+        }
+      ],
+      "dislikes": []
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "63ea73bde97a1264c23838d8"
+  },
+  "usuari": {
+    "$oid": "63ea6dc2e97a1264c23838c0"
+  },
+  "titol": "Musica",
+  "descripcio": "...",
+  "size": 4,
+  "durada": 5.3,
+  "thumbnail": null,
+  "num reproduccions": 199,
+  "num likes": 999,
+  "num dislikes": 44,
+  "estat": "public",
+  "etiquetes": [
+    {
+      "$oid": "63ea6edce97a1264c23838cd"
+    }
+  ],
+  "comentaris": [
+    {
+      "id": 555,
+      "comentat per": {
+        "$oid": "63ea6dc2e97a1264c23838c0"
+      },
+      "comentari": "......",
+      "likes": [
+        {
+          "$oid": "63ea6deae97a1264c23838c2"
+        }
+      ],
+      "dislikes": []
+    }
+  ]
+}]

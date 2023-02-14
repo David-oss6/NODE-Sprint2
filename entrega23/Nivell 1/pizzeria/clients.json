@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "63e9fac8e97a1264c238387a"
+  },
+  "id": 1,
+  "nom": "David",
+  "cognom": "Apellido1",
+  "adreca": "c/Barcelona",
+  "codi postal": "08022",
+  "localitat": "barcelona",
+  "provincia": "Barcelona",
+  "tel": 654987321
+},{
+  "_id": {
+    "$oid": "63ea2809e97a1264c23838b2"
+  },
+  "id": 2,
+  "nom": "Massimo",
+  "cognom": "Apellido2",
+  "adreca": "c/Valencia",
+  "codi postal": "08033",
+  "localitat": "barcelona",
+  "provincia": "Barcelona",
+  "tel": 987654321
+}]

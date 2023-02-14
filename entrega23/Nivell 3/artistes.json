@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "63ea8b50e97a1264c23838eb"
+  },
+  "nom": "Sabina",
+  "img": null
+},{
+  "_id": {
+    "$oid": "63ea8b5ce97a1264c23838ed"
+  },
+  "nom": "Serrat",
+  "img": null
+},{
+  "_id": {
+    "$oid": "63ea8b68e97a1264c23838ef"
+  },
+  "nom": "Shakira",
+  "img": null
+},{
+  "_id": {
+    "$oid": "63ea8b7ce97a1264c23838f1"
+  },
+  "nom": "Metallica",
+  "img": null
+}]

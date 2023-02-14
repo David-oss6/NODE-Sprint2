@@ -1,0 +1,63 @@
+[{
+  "_id": {
+    "$oid": "63e6747fde03d62fb3b94bce"
+  },
+  "id_venta": 1,
+  "client": {
+    "id_client": 1,
+    "nom": "Cliente1",
+    "codi postal": 8022,
+    "tel": 654987321,
+    "email": "asd@asd.com",
+    "data registre": "2023-01-01",
+    "recomentat per": null
+  },
+  "empleat": {
+    "id_empleat": 1,
+    "nom": "Empleat1",
+    "data venta": "2023-01-01"
+  },
+  "ullere": {
+    "_id": {
+      "$oid": "63e67aa6de03d62fb3b94bd5"
+    },
+    "id": 1,
+    "grad esquerra": 1,
+    "grad dreta": 0.5,
+    "montura": "pasta",
+    "color montura": "verd",
+    "color vidre": "blanc",
+    "preu": 9
+  }
+},{
+  "_id": {
+    "$oid": "63e6747fde03d62fb3b94bcf"
+  },
+  "id_venta": 2,
+  "client": {
+    "id_client": 2,
+    "nom": "Cliente2",
+    "codi postal": 8033,
+    "tel": 654922222,
+    "email": "ert@asd.com",
+    "data registre": "2023-02-02",
+    "recomentat per": null
+  },
+  "empleat": {
+    "id_empleat": 1,
+    "nom": "Empleat1",
+    "data venta": "2023-02-02"
+  },
+  "ullere": {
+    "_id": {
+      "$oid": "63e67aa6de03d62fb3b94bd6"
+    },
+    "id": 2,
+    "grad esquerra": 1,
+    "grad dreta": 0.5,
+    "montura": "metalica",
+    "color montura": "verd",
+    "color vidre": "blanc",
+    "preu": 8
+  }
+}]

@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "63ea2407e97a1264c23838a6"
+  },
+  "nom": "Marco",
+  "cognom": "Brulco",
+  "nif": "789456L",
+  "tel": 643215645,
+  "funcio": "reaprtidor"
+},{
+  "_id": {
+    "$oid": "63ea2436e97a1264c23838a9"
+  },
+  "nom": "Marta",
+  "cognom": "Oscura",
+  "nif": "98745M",
+  "tel": 643215645,
+  "funcio": "cuiner"
+}]

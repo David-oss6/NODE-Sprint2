@@ -1,0 +1,43 @@
+[{
+  "_id": {
+    "$oid": "63ea8be5e97a1264c23838f4"
+  },
+  "titol": "Cancion de Sabina",
+  "durada": 3,
+  "num reproduccions": 200
+},{
+  "_id": {
+    "$oid": "63ea8bf5e97a1264c23838f6"
+  },
+  "titol": "Cancion dos de Sabina",
+  "durada": 3,
+  "num reproduccions": 300
+},{
+  "_id": {
+    "$oid": "63ea8c01e97a1264c23838f8"
+  },
+  "titol": "Cancion de Serrat",
+  "durada": 3,
+  "num reproduccions": 200
+},{
+  "_id": {
+    "$oid": "63ea8c0ee97a1264c23838fa"
+  },
+  "titol": "Cancion dos de Serrat",
+  "durada": 3,
+  "num reproduccions": 200
+},{
+  "_id": {
+    "$oid": "63ea8c17e97a1264c23838fc"
+  },
+  "titol": "Cancion de Metallica",
+  "durada": 3,
+  "num reproduccions": 200
+},{
+  "_id": {
+    "$oid": "63ea8c23e97a1264c23838fe"
+  },
+  "titol": "Cancion dos de Metallica",
+  "durada": 3,
+  "num reproduccions": 200
+}]
