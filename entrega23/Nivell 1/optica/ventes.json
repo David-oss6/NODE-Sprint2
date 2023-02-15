@@ -18,16 +18,7 @@
     "data venta": "2023-01-01"
   },
   "ullere": {
-    "_id": {
-      "$oid": "63e67aa6de03d62fb3b94bd5"
-    },
-    "id": 1,
-    "grad esquerra": 1,
-    "grad dreta": 0.5,
-    "montura": "pasta",
-    "color montura": "verd",
-    "color vidre": "blanc",
-    "preu": 9
+    "$oid": "63ec93c308d52b9d2c21d1bc"
   }
 },{
   "_id": {
@@ -49,15 +40,6 @@
     "data venta": "2023-02-02"
   },
   "ullere": {
-    "_id": {
-      "$oid": "63e67aa6de03d62fb3b94bd6"
-    },
-    "id": 2,
-    "grad esquerra": 1,
-    "grad dreta": 0.5,
-    "montura": "metalica",
-    "color montura": "verd",
-    "color vidre": "blanc",
-    "preu": 8
+    "$oid": "63ec93f508d52b9d2c21d1c0"
   }
 }]
