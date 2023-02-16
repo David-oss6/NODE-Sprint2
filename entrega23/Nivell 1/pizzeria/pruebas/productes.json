@@ -1,0 +1,70 @@
+[
+  {
+    "_id": {
+      "$oid": "63e9f50ae97a1264c238386d"
+    },
+
+    "nom": "margarita",
+    "descripcio": "...",
+    "img": null,
+    "preu": 10,
+    "categoria": {
+      "id": 111,
+      "nom": "vegetariana"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "63e9f50ae97a1264c238386e"
+    },
+
+    "nom": "BBQ",
+    "descripcio": "...",
+    "img": null,
+    "preu": 10.6,
+    "categoria": {
+      "id": 222,
+      "nom": "classic"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "63e9f522e97a1264c2383870"
+    },
+
+    "nom": "Cheesburger",
+    "descripcio": "...",
+    "img": null,
+    "preu": 9.6
+  },
+  {
+    "_id": {
+      "$oid": "63e9f522e97a1264c2383871"
+    },
+
+    "nom": "Tofu",
+    "descripcio": "...",
+    "img": null,
+    "preu": 5.6
+  },
+  {
+    "_id": {
+      "$oid": "63e9f534e97a1264c2383873"
+    },
+
+    "nom": "fanta",
+    "descripcio": "...",
+    "img": null,
+    "preu": 2
+  },
+  {
+    "_id": {
+      "$oid": "63e9f534e97a1264c2383874"
+    },
+
+    "nom": "fanta",
+    "descripcio": "...",
+    "img": null,
+    "preu": 2
+  }
+]

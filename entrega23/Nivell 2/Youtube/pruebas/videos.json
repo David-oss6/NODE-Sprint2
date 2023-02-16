@@ -17,16 +17,10 @@
   "estat": "public",
   "etiquetes": [
     {
-      "_id": {
-        "$oid": "63ea6e92e97a1264c23838c7"
-      },
-      "nom": "Rock"
+      "$oid": "63ea6ec7e97a1264c23838cb"
     },
     {
-      "_id": {
-        "$oid": "63ea6ea2e97a1264c23838c9"
-      },
-      "nom": "Metal"
+      "$oid": "63ea6ea2e97a1264c23838c9"
     }
   ],
   "comentaris": [
@@ -62,16 +56,7 @@
   "estat": "public",
   "etiquetes": [
     {
-      "_id": {
-        "$oid": "63ea6ec7e97a1264c23838cb"
-      },
-      "nom": "Balada"
-    },
-    {
-      "_id": {
-        "$oid": "63ea6edce97a1264c23838cd"
-      },
-      "nom": "Clasica"
+      "$oid": "63ea6edce97a1264c23838cd"
     }
   ],
   "comentaris": [
@@ -107,16 +92,7 @@
   "estat": "public",
   "etiquetes": [
     {
-      "_id": {
-        "$oid": "63ea6ec7e97a1264c23838cb"
-      },
-      "nom": "Balada"
-    },
-    {
-      "_id": {
-        "$oid": "63ea6edce97a1264c23838cd"
-      },
-      "nom": "Clasica"
+      "$oid": "63ea6edce97a1264c23838cd"
     }
   ],
   "comentaris": [

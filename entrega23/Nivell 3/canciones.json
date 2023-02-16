@@ -4,21 +4,66 @@
   },
   "titol": "Cancion de Sabina",
   "durada": 3,
-  "num reproduccions": 200
+  "num reproduccions": 200,
+  "album": {
+    "_id": {
+      "$oid": "63ea8d71e97a1264c238390f"
+    },
+    "titol": "Album de Sabina",
+    "any": 1990,
+    "img": null
+  },
+  "artista": {
+    "_id": {
+      "$oid": "63ea8b50e97a1264c23838eb"
+    },
+    "nom": "Sabina",
+    "img": null
+  }
 },{
   "_id": {
     "$oid": "63ea8bf5e97a1264c23838f6"
   },
   "titol": "Cancion dos de Sabina",
   "durada": 3,
-  "num reproduccions": 300
+  "num reproduccions": 300,
+  "album": {
+    "_id": {
+      "$oid": "63ea8d71e97a1264c238390f"
+    },
+    "titol": "Album de Sabina",
+    "any": 1990,
+    "img": null
+  },
+  "artista": {
+    "_id": {
+      "$oid": "63ea8b50e97a1264c23838eb"
+    },
+    "nom": "Sabina",
+    "img": null
+  }
 },{
   "_id": {
     "$oid": "63ea8c01e97a1264c23838f8"
   },
   "titol": "Cancion de Serrat",
   "durada": 3,
-  "num reproduccions": 200
+  "num reproduccions": 200,
+  "album": {
+    "_id": {
+      "$oid": "63ea8d39e97a1264c2383909"
+    },
+    "titol": "Album Serrat",
+    "any": 1990,
+    "img": null
+  },
+  "artista": {
+    "_id": {
+      "$oid": "63ea8b5ce97a1264c23838ed"
+    },
+    "nom": "Serrat",
+    "img": null
+  }
 },{
   "_id": {
     "$oid": "63ea8c0ee97a1264c23838fa"
@@ -32,12 +77,42 @@
   },
   "titol": "Cancion de Metallica",
   "durada": 3,
-  "num reproduccions": 200
+  "num reproduccions": 200,
+  "album": {
+    "_id": {
+      "$oid": "63ea8ce6e97a1264c2383903"
+    },
+    "titol": "Enter the Sandman",
+    "any": 1990,
+    "img": null
+  },
+  "artista": {
+    "_id": {
+      "$oid": "63ea8b7ce97a1264c23838f1"
+    },
+    "nom": "Metallica",
+    "img": null
+  }
 },{
   "_id": {
     "$oid": "63ea8c23e97a1264c23838fe"
   },
   "titol": "Cancion dos de Metallica",
   "durada": 3,
-  "num reproduccions": 200
+  "num reproduccions": 200,
+  "album": {
+    "_id": {
+      "$oid": "63ea8ce6e97a1264c2383903"
+    },
+    "titol": "Enter the Sandman",
+    "any": 1990,
+    "img": null
+  },
+  "artista": {
+    "_id": {
+      "$oid": "63ea8b7ce97a1264c23838f1"
+    },
+    "nom": "Metallica",
+    "img": null
+  }
 }]

@@ -22,10 +22,48 @@
         "nom": "Marca1",
         "ulleres": [
           {
-            "$oid": "63ec93c308d52b9d2c21d1bc"
+            "_id": {
+              "$oid": "63ec93c308d52b9d2c21d1bc"
+            },
+            "grad esquerra": 1,
+            "grad dreta": 0.5,
+            "montura": "pasta",
+            "color montura": "verd",
+            "color vidre": "blanc",
+            "preu": 9
           },
           {
-            "$oid": "63ec93dd08d52b9d2c21d1be"
+            "_id": {
+              "$oid": "63ec93dd08d52b9d2c21d1be"
+            },
+            "grad esquerra": 0,
+            "grad dreta": 0,
+            "montura": "flotant",
+            "color montura": "negre",
+            "color vidre": "negre",
+            "preu": 9
+          },
+          {
+            "_id": {
+              "$oid": "63ec93f508d52b9d2c21d1c0"
+            },
+            "grad esquerra": 2,
+            "grad dreta": 2,
+            "montura": "metalica",
+            "color montura": "lila",
+            "color vidre": "blanc",
+            "preu": 9
+          },
+          {
+            "_id": {
+              "$oid": "63ec940508d52b9d2c21d1c2"
+            },
+            "grad esquerra": 1.5,
+            "grad dreta": 0.5,
+            "montura": "pasta",
+            "color montura": "vermell",
+            "color vidre": "blanc",
+            "preu": 9
           }
         ]
       },
@@ -34,10 +72,48 @@
         "nom": "Marca2",
         "ulleres": [
           {
-            "$oid": "63ec93f508d52b9d2c21d1c0"
+            "_id": {
+              "$oid": "63ec93c308d52b9d2c21d1bc"
+            },
+            "grad esquerra": 1,
+            "grad dreta": 0.5,
+            "montura": "pasta",
+            "color montura": "verd",
+            "color vidre": "blanc",
+            "preu": 9
           },
           {
-            "$oid": "63ec940508d52b9d2c21d1c2"
+            "_id": {
+              "$oid": "63ec93dd08d52b9d2c21d1be"
+            },
+            "grad esquerra": 0,
+            "grad dreta": 0,
+            "montura": "flotant",
+            "color montura": "negre",
+            "color vidre": "negre",
+            "preu": 9
+          },
+          {
+            "_id": {
+              "$oid": "63ec93f508d52b9d2c21d1c0"
+            },
+            "grad esquerra": 2,
+            "grad dreta": 2,
+            "montura": "metalica",
+            "color montura": "lila",
+            "color vidre": "blanc",
+            "preu": 9
+          },
+          {
+            "_id": {
+              "$oid": "63ec940508d52b9d2c21d1c2"
+            },
+            "grad esquerra": 1.5,
+            "grad dreta": 0.5,
+            "montura": "pasta",
+            "color montura": "vermell",
+            "color vidre": "blanc",
+            "preu": 9
           }
         ]
       }
@@ -67,10 +143,48 @@
         "nom": "Marca1",
         "ulleres": [
           {
-            "$oid": "63ec93c308d52b9d2c21d1bc"
+            "_id": {
+              "$oid": "63ec93c308d52b9d2c21d1bc"
+            },
+            "grad esquerra": 1,
+            "grad dreta": 0.5,
+            "montura": "pasta",
+            "color montura": "verd",
+            "color vidre": "blanc",
+            "preu": 9
           },
           {
-            "$oid": "63ec93dd08d52b9d2c21d1be"
+            "_id": {
+              "$oid": "63ec93dd08d52b9d2c21d1be"
+            },
+            "grad esquerra": 0,
+            "grad dreta": 0,
+            "montura": "flotant",
+            "color montura": "negre",
+            "color vidre": "negre",
+            "preu": 9
+          },
+          {
+            "_id": {
+              "$oid": "63ec93f508d52b9d2c21d1c0"
+            },
+            "grad esquerra": 2,
+            "grad dreta": 2,
+            "montura": "metalica",
+            "color montura": "lila",
+            "color vidre": "blanc",
+            "preu": 9
+          },
+          {
+            "_id": {
+              "$oid": "63ec940508d52b9d2c21d1c2"
+            },
+            "grad esquerra": 1.5,
+            "grad dreta": 0.5,
+            "montura": "pasta",
+            "color montura": "vermell",
+            "color vidre": "blanc",
+            "preu": 9
           }
         ]
       },
@@ -79,10 +193,48 @@
         "nom": "Marca2",
         "ulleres": [
           {
-            "$oid": "63ec93f508d52b9d2c21d1c0"
+            "_id": {
+              "$oid": "63ec93c308d52b9d2c21d1bc"
+            },
+            "grad esquerra": 1,
+            "grad dreta": 0.5,
+            "montura": "pasta",
+            "color montura": "verd",
+            "color vidre": "blanc",
+            "preu": 9
           },
           {
-            "$oid": "63ec940508d52b9d2c21d1c2"
+            "_id": {
+              "$oid": "63ec93dd08d52b9d2c21d1be"
+            },
+            "grad esquerra": 0,
+            "grad dreta": 0,
+            "montura": "flotant",
+            "color montura": "negre",
+            "color vidre": "negre",
+            "preu": 9
+          },
+          {
+            "_id": {
+              "$oid": "63ec93f508d52b9d2c21d1c0"
+            },
+            "grad esquerra": 2,
+            "grad dreta": 2,
+            "montura": "metalica",
+            "color montura": "lila",
+            "color vidre": "blanc",
+            "preu": 9
+          },
+          {
+            "_id": {
+              "$oid": "63ec940508d52b9d2c21d1c2"
+            },
+            "grad esquerra": 1.5,
+            "grad dreta": 0.5,
+            "montura": "pasta",
+            "color montura": "vermell",
+            "color vidre": "blanc",
+            "preu": 9
           }
         ]
       }

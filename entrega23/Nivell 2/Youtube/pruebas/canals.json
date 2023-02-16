@@ -1,0 +1,15 @@
+[
+  {
+    "_id": {
+      "$oid": "63ea74b9e97a1264c23838dc"
+    },
+    "titol": "Musica",
+    "descripcio": "...",
+    "data creacio": "2023-01-01",
+    "subscrits": [
+      {
+        "$oid": "63ea6dc2e97a1264c23838c0"
+      }
+    ]
+  }
+]

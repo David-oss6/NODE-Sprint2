@@ -10,14 +10,39 @@
   "tipus comanda": "per emportar",
   "productes": [
     {
-      "$oid": "63e9f534e97a1264c2383874"
+      "_id": {
+        "$oid": "63e9f534e97a1264c2383874"
+      },
+      "nom": "fanta",
+      "descripcio": "...",
+      "img": null,
+      "preu": 2
     },
     {
-      "$oid": "63e9f50ae97a1264c238386d"
+      "_id": {
+        "$oid": "63e9f50ae97a1264c238386d"
+      },
+      "nom": "margarita",
+      "descripcio": "...",
+      "img": null,
+      "preu": 10,
+      "categoria": {
+        "id": 111,
+        "nom": "vegetariana"
+      }
     }
   ],
   "botiga": "botiga1",
-  "empleat": " ObjectId(\"63ea2407e97a1264c23838a6\")",
+  "empleat": {
+    "_id": {
+      "$oid": "63ea2407e97a1264c23838a6"
+    },
+    "nom": "Marco",
+    "cognom": "Brulco",
+    "nif": "789456L",
+    "tel": 643215645,
+    "funcio": "reaprtidor"
+  },
   "preu total": 12
 },{
   "_id": {
@@ -30,15 +55,38 @@
   "tipus comanda": "a botiga",
   "productes": [
     {
-      "$oid": "63e9f534e97a1264c2383874"
+      "_id": {
+        "$oid": "63e9f50ae97a1264c238386e"
+      },
+      "nom": "BBQ",
+      "descripcio": "...",
+      "img": null,
+      "preu": 10.6,
+      "categoria": {
+        "id": 222,
+        "nom": "classic"
+      }
     },
     {
-      "$oid": "63e9f50ae97a1264c238386d"
+      "_id": {
+        "$oid": "63e9f534e97a1264c2383873"
+      },
+      "nom": "fanta",
+      "descripcio": "...",
+      "img": null,
+      "preu": 2
     }
   ],
   "botiga": "botiga1",
   "empleat": {
-    "$oid": "63ea2436e97a1264c23838a9"
+    "_id": {
+      "$oid": "63ea2436e97a1264c23838a9"
+    },
+    "nom": "Marta",
+    "cognom": "Oscura",
+    "nif": "98745M",
+    "tel": 643215645,
+    "funcio": "cuiner"
   },
   "preu total": 12
 }]
